@@ -11,6 +11,7 @@
 #include <rtthread.h>
 #include <rtdevice.h>
 #include <board.h>
+#include "deca_device_api.h"
 
 /* defined the LED0 pin: PI8 */
 #define LED0_PIN    GET_PIN(E, 0)
@@ -21,7 +22,7 @@ int main(void)
     /* set LED0 pin mode to output */
     rt_pin_mode(LED0_PIN, PIN_MODE_OUTPUT);
 	rt_pin_mode(LED1_PIN, PIN_MODE_OUTPUT);
-
+//	dwt_initialise(1);
     while (1)
     {
         rt_pin_write(LED0_PIN, PIN_HIGH);

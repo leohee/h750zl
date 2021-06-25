@@ -148,7 +148,7 @@ __exit:
 int stm32_flash_erase(rt_uint32_t addr, size_t size)
 {
     rt_err_t result = RT_EOK;
-    rt_uint32_t SECTORError = 0;
+    uint32_t SECTORError = 0;
 
     if ((addr + size - 1) > FLASH_END)
     {
